@@ -1,5 +1,7 @@
 package com.pkm.PrototypePKM.ui.navGraph
 
+
+import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -23,7 +25,8 @@ fun HomeNavGraph(navController: NavHostController) {
             BerandaScreen()
         }
         composable(route=BottomBarItem.Feedback.route){
-            FeedbackScreen()           
+            FeedbackScreen(navController)
         }
     }
 }
+

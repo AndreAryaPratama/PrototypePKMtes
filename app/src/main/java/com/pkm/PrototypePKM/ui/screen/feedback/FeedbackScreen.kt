@@ -62,9 +62,9 @@ fun FeedbackScreen(navController: NavHostController) {
     LaunchedEffect(showCamera.value) {
         if (showCamera.value) {
             val option = ScanOptions()
-            // option.setDesiredBarcodeFormats(ScanOptions.QR_CODE)
+            option.setDesiredBarcodeFormats(ScanOptions.QR_CODE)
             options.setCaptureActivity(AnyOrientationCaptureActivity.class);
-            option.setDesiredBarcodeFormats(ScanOptions.ONE_D_CODE_TYPES)
+            // option.setDesiredBarcodeFormats(ScanOptions.ONE_D_CODE_TYPES)
             option.setPrompt("Scan a QR code")
             option.setCameraId(0)
             option.setBeepEnabled(false)
